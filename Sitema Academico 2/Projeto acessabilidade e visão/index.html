@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendas Acessíveis</title>
+  
+</head>
+<body>
+  <!-- Elemento de vídeo HTML5 -->
+  <!-- O atributo 'controls' adiciona controles de reprodução (play, pausa, volume, etc.) ao vídeo -->
+  <video controls>
+  <!-- O atributo 'src' define o caminho do arquivo de vídeo; 'type' especifica o tipo MIME do vídeo (neste caso, mp4) -->
+    <source src="videos/xadrez2.mp4" type="video/mp4"> <!-- Caminho do vídeo -->
+<!-- O atributo 'src' especifica o caminho do arquivo de legendas; 'kind' define o tipo de conteúdo (subtítulos); 'srclang' indica o idioma das legendas; 'label' dá um nome para as legendas; 'default' indica que as legendas são ativadas por padrão -->	
+    <track src="legendas/legendas.vtt" kind="subtitles" 
+    srclang="pt-br" label="Português" default> <!-- Caminho das legendas -->
+ 
+  </video>
+</body>
+</html>
