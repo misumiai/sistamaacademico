@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Acessível</title>
+</head>
+<body>
+
+    <p id="mensagem">Esta é uma mensagem acessível para pessoas com deficiência visual. </p>
+
+    <button onclick="lerMensagem()" aria-label="Ouvir mensagem de boas-vindas">
+        Ouvir mensagem
+    </button>
+
+    <script>
+
+        function lerMensagem(){
+        const text= document.getElementById ("mensagem").textContent;
+        const fala= new SpeechSynthesisUtterance(text);
+        fala.lang ="pt-br";
+        speechSynthesis.speak(fala);
+        }
+
+    </script>
+</body>
+</html>

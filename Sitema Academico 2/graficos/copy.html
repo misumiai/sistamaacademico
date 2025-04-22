@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Gerar gráficos: Google Charts, Chart.js (utilizado, mais simples) ou Datawrapper --> 
+<head>
+    <!-- Define o charset para garantir a exibição correta dos caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Define a configuração para dispositivos móveis (responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página, aparece na aba do navegador -->
+    <title>Notas dos Alunos</title>
+
+    <!-- Carrega a biblioteca Chart.js a partir de uma CDN para criar gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Elemento onde o gráfico será desenhado, usando o id "grafico" -->
+    <canvas id="grafico"></canvas>
+
+    <script>
+        // Obtém o contexto do elemento canvas (lugar onde o gráfico será desenhado)
+		//  O 2d especifica que o gráfico será desenhado em duas dimensões (horizontal e vertical).
+        var ctx = document.getElementById('grafico').getContext('2d');
+
+        // Cria o gráfico utilizando o contexto obtido
+        new Chart(ctx, {
+            type: 'bar', // Define o tipo de gráfico como "bar" (gráfico de barras)
+            
+            data: { // Define os dados do gráfico
+                labels: ['João', 'Maria', 'José', 'Ana'], // Nomes dos alunos (eixo X)
+                datasets: [{
+                    data: [7, 9, 6, 8], // Notas dos alunos (eixo Y)
+                }]
+            },
+
+            options: { // Define as opções de configuração do gráfico
+                plugins: {
+                    legend: { // Configuração para a legenda
+                        display: false, // Remove a legenda, que normalmente mostra o nome do conjunto de dados
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

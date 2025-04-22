@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart graficos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="grafico"></canvas>
+
+<script>
+  var ctx = document.getElementById('grafico').getContext('2d')
+  new Chart( ctx, {
+
+    type:'bar',
+    data: {
+         labels:['jp', 'maria', 'jose', 'Ana',],
+            datasets:[{
+                data: [9,6,8,4]
+
+
+    }],
+        option :{
+            plugins: {
+                legend: {
+                    display: false
+
+                }
+            }
+                    
+        }
+        
+    }
+  })
+  </script>
+</body>
+</html>
