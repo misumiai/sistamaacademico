@@ -30,3 +30,4 @@ for item in dict_carro.keys():
 # ou 
 # del dict_carro["modelo"] /"del"\
 #print(dict_carro)
+aula24.somar()
