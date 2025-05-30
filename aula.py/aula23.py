@@ -25,3 +25,8 @@ print(dict_carro.keys())
 
 for item in dict_carro.keys():
   print(dict_carro.get(item))
+
+#dict_carro.pop("marca") /apaga o elemento /".pop"\ *bonk*
+# ou 
+# del dict_carro["modelo"] /"del"\
+#print(dict_carro)
