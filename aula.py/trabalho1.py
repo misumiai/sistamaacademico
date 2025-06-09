@@ -21,3 +21,22 @@ def ler_contatos():
         # Exibe uma mensagem avisando que o arquivo não foi encontrado.
         # Isso evita que o programa trave com uma mensagem de erro feia para o usuário.
         print("\nArquivo de contatos não encontrado.")
+
+def inserir_contato():
+    # Solicita os dados do usuário
+    nome = input("Digite o nome do contato: ")
+    telefone = input("Digite o telefone do contato: ")
+    email = input("Digite o e-mail do contato: ")
+    cidade = input("Digite a cidade do contato: ")
+
+    # Formata os dados como uma linha de texto
+    # Cada campo é separado por um " | " para facilitar a leitura
+    contato = f"{nome} | {telefone} | {email} | {cidade}\n"
+
+    # Abre (ou cria) o arquivo "contatos.txt" no modo "a" (adicionar)
+    # encoding="utf-8" garante que acentos e caracteres especiais sejam salvos corretamente
+    with open("contatos.txt", "a", encoding="utf-8") as arquivo:
+        arquivo.write(contato)  # Escreve o contato no arquivo
+
+    # Confirma que o contato foi salvo
+    print("Contato salvo com sucesso!")
