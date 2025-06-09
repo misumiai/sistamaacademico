@@ -5,7 +5,7 @@ def ler_contatos():
     try:
         # Abre o arquivo "contatos.txt" no modo leitura ("r").
         # O "with" garante que o arquivo será fechado automaticamente após o uso.
-        # A codificação "utf-8" permite ler caracteres especiais corretamente (acentos, cedilha, etc).
+        # A codificação "utf-8" permite ler caracteres especiais corretamente.
         with open("contatos.txt", "r", encoding="utf-8") as arquivo:
             # Imprime uma linha em branco e a mensagem "Contatos salvos:"
             print("\nContatos salvos:")
@@ -16,7 +16,7 @@ def ler_contatos():
     # Esse erro ocorre quando o arquivo "contatos.txt" não existe no mesmo diretório do script.
     except FileNotFoundError:
         # Exibe uma mensagem avisando que o arquivo não foi encontrado.
-        # Isso evita que o programa trave com uma mensagem de erro feia para o usuário.
+        # Isso evita que o programa trave com uma mensagem de erro horrorosa para o usuário.
         print("\nArquivo de contatos não encontrado.")
 
 def inserir_contato():
@@ -27,7 +27,6 @@ def inserir_contato():
     cidade = input("Digite a cidade do contato: ")
 
     # Formata os dados como uma linha de texto
-    # Cada campo é separado por um " | " para facilitar a leitura
     contato = f"{nome} | {telefone} | {email} | {cidade}\n"
 
     # Abre (ou cria) o arquivo "contatos.txt" no modo "a" (adicionar)
