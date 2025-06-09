@@ -9,7 +9,7 @@ def ler_contatos():
         with open("contatos.txt", "r", encoding="utf-8") as arquivo:
             # Imprime uma linha em branco e a mensagem "Contatos salvos:"
             print("\nContatos salvos:")
-            # Percorre cada linha do arquivo (ou seja, cada contato armazenado)
+            # Percorre cada linha do arquivo
             for linha in arquivo:
                 print(linha.strip())
     # Bloco "except" que será executado se o erro FileNotFoundError acontecer.
@@ -29,7 +29,7 @@ def inserir_contato():
     # Formata os dados como uma linha de texto
     contato = f"{nome} | {telefone} | {email} | {cidade}\n"
 
-    # Abre (ou cria) o arquivo "contatos.txt" no modo "a" (adicionar)
+    # Abre (ou cria) o arquivo "contatos.txt" no modo "a" (de adicionar)
     # encoding="utf-8" garante que acentos e caracteres especiais sejam salvos corretamente
     with open("contatos.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(contato)  # Escreve o contato no arquivo
