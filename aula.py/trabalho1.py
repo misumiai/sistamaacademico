@@ -1,32 +1,31 @@
 # Define uma função chamada ler_contatos.
 def ler_contatos():
-    # Início de um bloco "try", usado para capturar e tratar erros.
-    # Se acontecer um erro dentro do bloco "try", o Python pula para o bloco "except".
+    # Início de um bloco "try", usado para capturar e tratar erros
+    # Se acontecer um erro dentro do bloco "try" pula para o bloco "except"
     try:
-        # Abre o arquivo "contatos.txt" no modo leitura ("r").
-        # O "with" garante que o arquivo será fechado automaticamente após o uso.
-        # A codificação "utf-8" permite ler caracteres especiais corretamente.
+        # Abre o arquivo "contatos.txt" no modo leitura ("r")
+        # O "with" garante que o arquivo sera fechado automaticamente após o uso
+        # A codificação "utf-8" permite ler caracteres especiais corretamente
         with open("contatos.txt", "r", encoding="utf-8") as arquivo:
-            # Imprime uma linha em branco e a mensagem "Contatos salvos:"
+            # imprime uma linha em branco e a mensagem "Contatos salvos:"
             print("\nContatos salvos:")
             # Percorre cada linha do arquivo
             for linha in arquivo:
                 print(linha.strip())
-    # Bloco "except" que será executado se o erro FileNotFoundError acontecer.
-    # Esse erro ocorre quando o arquivo "contatos.txt" não existe no mesmo diretório do script.
+    # Bloco "except" que sera executado se o erro FileNotFoundError acontecer
     except FileNotFoundError:
         # Exibe uma mensagem avisando que o arquivo não foi encontrado.
-        # Isso evita que o programa trave com uma mensagem de erro horrorosa para o usuário.
+        # isso evita que o programa trave com uma mensagem de erro horrorosa para o usuario
         print("\nArquivo de contatos não encontrado.")
 
 def inserir_contato():
-    # Solicita os dados do usuário
+    # solicita os dados do usuário
     nome = input("Digite o nome do contato: ")
     telefone = input("Digite o telefone do contato: ")
     email = input("Digite o e-mail do contato: ")
     cidade = input("Digite a cidade do contato: ")
 
-    # Formata os dados como uma linha de texto
+    # formata os dados como uma linha de texto
     contato = f"{nome} | {telefone} | {email} | {cidade}\n"
 
     # Abre (ou cria) o arquivo "contatos.txt" no modo "a" (de adicionar)
@@ -34,5 +33,5 @@ def inserir_contato():
     with open("contatos.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(contato)  # Escreve o contato no arquivo
 
-    # Confirma que o contato foi salvo
+    # confirma que o contato foi salvo
     print("Contato salvo com sucesso!")
