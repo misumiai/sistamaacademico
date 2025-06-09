@@ -1,5 +1,4 @@
 # Define uma função chamada ler_contatos.
-# Funções são blocos de código que só são executados quando chamados.
 def ler_contatos():
     # Início de um bloco "try", usado para capturar e tratar erros.
     # Se acontecer um erro dentro do bloco "try", o Python pula para o bloco "except".
