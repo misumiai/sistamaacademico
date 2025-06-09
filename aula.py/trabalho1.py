@@ -12,8 +12,6 @@ def ler_contatos():
             print("\nContatos salvos:")
             # Percorre cada linha do arquivo (ou seja, cada contato armazenado)
             for linha in arquivo:
-                # .strip() remove espaços extras no início e no fim da linha, incluindo quebras de linha (\n)
-                # Isso evita que apareçam linhas vazias ou mal formatadas ao imprimir
                 print(linha.strip())
     # Bloco "except" que será executado se o erro FileNotFoundError acontecer.
     # Esse erro ocorre quando o arquivo "contatos.txt" não existe no mesmo diretório do script.
